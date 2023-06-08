@@ -1,0 +1,82 @@
+body{
+    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 20px;
+
+    background-color: white;
+    animation: color-change 0.1s infinite;
+}
+/*@keyframes color-change {
+    0% {background-color: red;}
+    25% {background-color: yellow;}
+    75% {background-color: blue;}
+    100% {background-color: purple;}
+}*/
+.all{
+    display: flex;
+    flex-direction: column;
+}
+#logo{
+    height: 150px;
+    width: 250px;
+    
+    float: left;
+    
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    margin-bottom: 10px;
+    
+    justify-content: space-between;
+    align-items: center;
+    grid-area: header;
+    padding: 5px;
+    border: black solid;
+    color: black;
+}
+.kategorija{
+    
+    border: black solid;
+    flex: 1;
+    margin: 0 10px;
+    border-radius: 46px;
+}
+.kosarica{
+    
+    height: 100%;
+    position: relative;
+    
+}
+.kosarica2{
+    
+    position: relative;
+    display: flex;
+    margin-right: 40px;
+    
+}
+#kosarica{
+    height: 125px;
+    width: 125px;
+
+    height: inherit;
+    padding-top: 20%;
+    padding-left: 5%;
+}
+
+
+#counter{
+    margin-top: -120px;
+    margin-left: -90px;
+}
+
+#search{
+    height: 80px;
+    width: 86px;
+    margin-left: 25px;
+    margin-top: 40px;
+    margin-right: -30px;
+}

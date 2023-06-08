@@ -1,0 +1,237 @@
+body{
+    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 20px;
+
+    background-color: white;
+    animation: color-change 0.1s infinite;
+}
+/*@keyframes color-change {
+    0% {background-color: red;}
+    25% {background-color: yellow;}
+    75% {background-color: blue;}
+    100% {background-color: purple;}
+}*/
+li{
+    list-style-type: none;
+    height: 100px;
+    line-height: 1.2;
+}
+#logo{
+    height: 150px;
+    width: 250px;
+    
+    float: left;
+    
+}
+#kosarica{
+    height: 125px;
+    width: 125px;
+
+    height: inherit;
+    padding-top: 20%;
+    padding-left: 5%;
+}
+#kontakt{
+    border: 1px solid;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+#lista{
+    border: 1px solid;
+    font-size: medium;
+    
+}
+#poc_slika{
+    width: 100%;
+    display: block;
+    margin: 0 auto; 
+}
+#textic{
+    position: absolute;
+    bottom: auto;
+    right: 0;
+    left: 0;
+    text-align: center;
+    border: black solid;
+    font-size: xx-large;
+    
+
+    -webkit-text-stroke: 1px black;
+    /*text-stroke: 1px black;*/
+    
+    background: linear-gradient(to right, #f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00);
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+
+
+.wrapper{
+    display: grid;
+    padding: 5px;
+    margin-top: 10px;
+    line-height: 150px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    margin-bottom: 10px;
+    
+    justify-content: space-between;
+    align-items: center;
+    grid-area: header;
+    padding: 5px;
+    border: black solid;
+    color: black;
+}
+.main{
+    text-align: left;
+    background: whitesmoke;
+    grid-area: main;
+    padding: 5px;
+    border-radius: 45px;
+    border: 3px solid purple;
+
+    position: relative;
+
+    background-image: url('https://cdn.pixabay.com/photo/2016/10/04/02/26/engine-1713398_960_720.jpg');
+    background-size: cover;
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 400px;
+    margin-bottom: 10px;
+    
+    
+}
+.aside-1{
+    background: tomato;
+    border-right: 1px solid gray;
+    grid-area: aside1;
+    padding: 5px;
+    max-width: 500px;
+    margin-right: 10px;
+}
+.aside-2{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    align-items: center;
+
+
+    background: gray;
+    border-left: 1px solid gray;
+    grid-area: aside2;
+    padding: 5px;
+}
+
+
+
+
+.kategorija{
+    
+    border: black solid;
+    flex: 1;
+    margin: 0 10px;
+    border-radius: 46px;
+}
+.kosarica{
+    
+    height: 100%;
+    position: relative;
+    
+}
+.kosarica2{
+    
+    position: relative;
+    display: flex;
+    margin-right: 40px;
+    
+}
+#search{
+    height: 80px;
+    width: 86px;
+    margin-left: 25px;
+    margin-top: 40px;
+    margin-right: -30px;
+}
+
+#proizvod{
+    background: white;
+    width: 250px;
+    height: 250px;
+    margin: 10px;
+    line-height: 100px;
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+    border-radius: 45px;
+
+    display: block;
+}
+#proizvod2{
+    margin-top: -40px;
+    margin-bottom: -110px;
+}
+
+#kontakt{
+    display: flex;
+    flex-direction: column;
+    border-radius: 45px;
+}
+#lista{
+    margin-bottom: 10px;
+    border-radius: 45px;
+}
+
+
+@media all and (max-width:700px){
+
+
+    .wrapper{
+        grid-template-areas: 
+        'header header header header header'
+        'main main main main main'
+        'aside1 aside1 aside2 aside2 aside2'
+        'aside1 aside1 aside2 aside2 aside2';
+    }
+
+}
+
+
+@media all and (min-width:701px){
+   
+
+    .wrapper{
+        grid-template-areas: 
+        'header header header header header'
+        'aside1 main main main main'
+        'aside1 aside2 aside2 aside2 aside2'
+        'aside1 aside2 aside2 aside2 aside2';
+    }
+
+    
+}
+
+
+#counter{
+    margin-top: -120px;
+    margin-left: -90px;
+}
+
+.btn{
+    background-color: blue;
+    border-radius: 15px;
+}

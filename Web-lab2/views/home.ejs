@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motor store: Fossil</title>
+
+    <link rel="stylesheet" href="../styles/grid.css">
+    
+    
+</head>
+<body>
+    <section class="wrapper">
+
+    <section class="header">
+        
+        <div class="logo">
+            <a href="/"><img id="logo" src="../images/logo.png" alt="logotip"></a>
+           
+        </div>
+
+        <div class="kategorija" id="kategorija2">
+            <% if (req.url === '/') { %>
+           <a href="/getCategories">GET CATEGORIES</a>
+           <% } %>
+           <% if (req.url === "/getProducts/" + categoryId) { %>
+                <%= categoryId %>
+           <% } %>
+        </div>
+
+        
+        <div class="kosarica">
+            <div class="kosarica2">
+                <a href="/cart"><img id="kosarica" src="../images/kart.png" alt="kosarica"></a>
+                <a href=""></a><img id="search" src="../images/search.jpg" alt="search"></a>
+            </div>
+            
+           <span class="kosarica-counter" id="kosarica_counter">
+           </span>
+        </div>
+        
+        
+        
+    </section>
+
+    <div class="main">
+        <h2 id="textic">Dobro dosli na web stranicu Fossil motor</h2>
+        
+    </div>
+
+    <div class="aside-1">
+        <div id="lista">
+
+            <% if (req.url !== '/' && req.url !== '/cart') { %>
+
+            <ul>
+            <% data.categories.forEach(function(category) { %>
+            <a href="/getProducts/<%=category.name%>"><li id="li"><%= category.name %></li></a>
+            <% }); %>
+            </ul>
+
+            <% } %>
+        </div>
+
+        <div id="kontakt">
+            <ul>
+            <a href=""><li>Kontakt</li></a>
+            <a href=""><li>Newsletter</li></a>
+            <a href=""><li>Pretplati se</li></a>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="aside-2" id="aside2">
+        <% data.categories.forEach(function(category) { %>
+
+            <% if (req.url === ("/getProducts/" + category.name)) { %>
+
+                <% category.products.forEach(function(product) { %>
+
+                    <div id="product_div">
+                    <img id="proizvod" src="../<%= product.image %>" alt="<%= product.name %> Image">
+                    <p id="proizvod2"><%= product.name %></p>
+
+                    <form action="/cart/add/:id" method="post">
+                        <input type="hidden" name="id" value="<%=category.name%>">
+                        <input name="quantity" value="0">
+                        <input type="submit" value="Add to cart" class="btn">
+
+                    </form>
+                    </div>
+
+                <% }); %>
+
+                
+
+            <% } %>
+
+        <% }); %>
+    </div>
+</div>
+
+<!--<script type="text/javascript" src="../scripts/script.js" defer></script>-->
+</body>
+</html>

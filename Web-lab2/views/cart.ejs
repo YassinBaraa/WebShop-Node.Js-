@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="../styles/cart.css">
+    <!--<script src="scripts/cart.js"></script>-->
+
+</head>
+<body>
+    <div class="all">
+   <section class="header">
+        
+        <div class="logo">
+            <a href="/"><img id="logo" src="images/logo.png" alt="logotip"></a>
+           
+        </div>
+
+        <div class="kategorija" id="kategorija2">
+        </div>
+
+        
+        <div class="kosarica">
+            <div class="kosarica2">
+                <a href="/cart"><img id="kosarica" src="images/kart.png" alt="kosarica"></a>
+                <a href=""></a><img id="search" src="images/search.jpg" alt="search"></a>
+            </div>
+            
+           <span class="kosarica-counter" id="kosarica_counter">
+           </span>
+        </div>
+        
+        
+        
+    </section>
+
+    <% cart.forEach(function(item){ %>
+    <div class="aside-2" id="aside2">
+        <p><%= item.id %></p>
+        <p><%= item.quantity %></p>
+
+    </div>
+    <% }); %>
+
+    </div>
+    
+</body>
+</html>
